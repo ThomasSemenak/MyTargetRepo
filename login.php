@@ -4,7 +4,7 @@ session_start();
 
 // If user is already logged in, redirect to welcome page
 if(isset($_SESSION['UserName'])) {
-    header("Location: welcome.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if($passwordInput == $user['password']) {
             $_SESSION['UserName'] = $user['username'];
             $_SESSION['user_id'] = $user['id'];
-            header("Location: welcome.php");
+            header("Location: index.php");
             exit();
         } else {
             $errorMessage = "Invalid email or password.";
