@@ -1,6 +1,6 @@
 <?php 
 $page_title = "About Us";
-include "./views/header.php";
+include "header.php";
 ?>
 <!-- Hero Section -->
 <div class="hero" style="background: url('assets/images/hero_about.jpg') no-repeat center center; background-size: cover; height: 200px; position: relative; color: #fff;">
