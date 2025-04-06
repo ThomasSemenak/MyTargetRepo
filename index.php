@@ -5,10 +5,12 @@
 
 <?php
 session_start();
-$_SESSION['profile_pic'] = isset($profile_pic_url) ? $profile_pic_url : 'default-profile-pic.png';
 
 $page_title = "News Portal";
 $page_styles = ["dashboard.css"];
+
+
+echo "Your user ID is: ". htmlspecialchars($_SESSION['user_id']);
 
 $serverName = "ts19cpsqldb.database.windows.net";
 $connectionOptions = array(
@@ -110,7 +112,7 @@ sqlsrv_free_stmt($stmt);
 sqlsrv_close($conn);
 
 include "./views/header.php";
-echo "Your user ID is: ". htmlspecialchars($_SESSION['user_id']);
+
 ?>
 
 <div class="main-container">
