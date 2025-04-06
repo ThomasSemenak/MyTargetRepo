@@ -47,24 +47,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
+    <!-- Include the login-register.css file; adjust the path as needed -->
+    <link rel="stylesheet" type="text/css" href="styles/login-register.css">
 </head>
 <body>
-    <h2>Register</h2>
-    <?php if (isset($message)) { echo "<p>" . $message . "</p>"; } ?>
-    <form method="post" action="">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required />
+    <div class="main-container">
+        <div class="content-container">
+            <h2>Register</h2>
+            <?php if (isset($message)) { echo "<p>" . $message . "</p>"; } ?>
+            <div class="form-container">
+                <form method="post" action="" class="main-form">
+                    <input type="text" id="username" name="username" placeholder="Username" required />
+                    <input type="email" id="email" name="email" placeholder="Email" required />
+                    <input type="password" id="password" name="password" placeholder="Password" required />
+                    <button type="submit">Register</button>
+                </form>
+                <div class="login-signup-redirect">
+                    <p>Already have an account?</p>
+                    <a href="login.php" class="login-signup-link">Login here</a>
+                </div>
+            </div>
         </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required />
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required />
-        </div>
-        <button type="submit">Register</button>
-    </form>
+    </div>
 </body>
 </html>
