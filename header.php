@@ -7,7 +7,8 @@
  <div style="width: 100%; background-color: #f1f1f1; padding: 10px; display: flex; justify-content: space-between; align-items: center;">
      <!-- Navigation Menu -->
      <div>
-         <a href="welcome.php" style="margin-right: 15px; text-decoration: none;">Dashboard</a>
+         <a href="welcome.php" style="margin-right: 15px; text-decoration: none;">Welcome</a>
+         <a href="index.php" style="margin-right: 15px; text-decoration: none;">Dashboard</a>
          <a href="generate.php" style="margin-right: 15px; text-decoration: none;">Generate</a>
          <a href="about_us.php" style="margin-right: 15px; text-decoration: none;">About Us</a>
          <a href="faq.php" style="text-decoration: none;">FAQ</a>
